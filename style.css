@@ -1,0 +1,37 @@
+:root{
+    --offcanvas-width:270px;
+    --topNavbarHeight:56px;
+}
+.sidebar-nav{
+    width:var(--offcanvas-width) !important;
+}
+.sidebar-link[aria-expanded="true"] .right-icon{
+    transform:rotate(180deg);
+    
+}
+.sidebar-link .right-icon{
+    transition: .4s ease;
+}
+@media (min-width:992px) {
+    .offcanvas-backdrop{
+        display: none !important;
+    }
+    .sidebar-nav{
+        transform: none !important;
+        visibility: visible !important;
+        top:var(--topNavbarHeight) !important
+    }
+    main{
+        margin-left:var(--offcanvas-width)
+    }
+}
+
+@media (min-width:480px) {
+    .Dashboard-count .card{
+        margin-bottom: 20px;
+    }
+    .Dashboard-tab .nav-tabs .nav-link{
+        padding:5px;
+        font-size: 12px;
+    }
+}
